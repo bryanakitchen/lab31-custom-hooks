@@ -8,9 +8,7 @@ export const getAllCharacters = () => {
     })));
 };
 
-
 export const getCharacter = (id) => {
   return fetch(`https://ac-vill.herokuapp.com/villagers/${id}`)
-    .then(res => res.json())
-    .then(character => character.map(item => ({ item })));
+    .then(res => res.json());
 };
