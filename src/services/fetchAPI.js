@@ -4,7 +4,7 @@ export const getAllCharacters = () => {
     .then(characters => characters.map(character => ({
       id: character._id,
       name: character.name,
-      photo: character.photo
+      image: character.image
     })));
 };
 
