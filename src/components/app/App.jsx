@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import CharactersPages from '../../containers/CharactersPages';
 import Header from '../header/Header';
 
 export default function App() {
@@ -8,9 +9,9 @@ export default function App() {
       <Header />
       <Switch>
 
-        <Route exact path="/" component={Header} />
+        <Route exact path="/" component={CharactersPages} />
 
-        {/* <Route exact path="" component={} /> */}
+        {/* <Route exact path="/" component={CharactersPages} /> */}
 
       </Switch>
     </Router>
