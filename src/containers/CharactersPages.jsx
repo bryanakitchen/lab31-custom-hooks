@@ -3,9 +3,9 @@ import React from 'react';
 export default function CharactersPages() {
   
   
-    return (
+  return (
     <div>
-            Hello from pages
+        Hello from pages
     </div>
   );
 }
