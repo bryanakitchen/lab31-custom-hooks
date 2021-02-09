@@ -5,7 +5,7 @@ function Character({ name, image }) {
   return (
     <>
       <figure>
-        <img src={image} alt={name} />
+        <img src={image} alt={name} style={{ width: '200px' }}/>
         <figcaption>{name}</figcaption>    
       </figure>    
     </>

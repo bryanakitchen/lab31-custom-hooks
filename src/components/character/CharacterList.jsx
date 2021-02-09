@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Character from './Character';
+import { Link } from 'react-router-dom';
 
-// add link around Character when finished
 function CharacterList({ characters }) {
 
   const characterElements = characters.map(character => (
     <li key={character.id}>
-      <Character name={character.name} image={character.image} /> 
+      <Link to={`/character/${character.name}`}>
+        <Character name={character.name} image={character.image} /> 
+      </Link>
     </li>
   ));
   
