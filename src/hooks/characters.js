@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getAllCharacters } from '../services/fetchAPI';
+import { getAllCharacters, getCharacter } from '../services/fetchAPI';
 
 export const useCharacters = () => {
   const [loading, setLoading] = useState(true);
@@ -18,4 +18,24 @@ export const useCharacters = () => {
     characters
   };
 
+};
+
+export const useSingleCharacter = () => {
+   
+  const [loading, setLoading] = useState(true);
+  const [character, setCharacter] = useState([]);
+  
+  useEffect(() => {
+    getCharacter()
+      .then(character => {
+        setCharacter(character);
+        setLoading(false);
+      });
+  }, []);
+  
+  return {
+    loading,
+    character
+  };
+  
 };
