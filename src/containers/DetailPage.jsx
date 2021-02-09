@@ -7,8 +7,6 @@ import { useSingleCharacter } from '../hooks/characters';
 const DetailPage = ({ match }) => {
   const { loading, character } = useSingleCharacter(match.params.id);
     
-  console.log(character);
-
   if(loading) return <Loading />;
 
   return <CharacterDetail character={character} />;
