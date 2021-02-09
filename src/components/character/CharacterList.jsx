@@ -7,7 +7,7 @@ function CharacterList({ characters }) {
 
   const characterElements = characters.map(character => (
     <li key={character.id}>
-      <Link to={`/character/${character.name}`}>
+      <Link to={`/character/${character.id}`}>
         <Character name={character.name} image={character.image} /> 
       </Link>
     </li>
