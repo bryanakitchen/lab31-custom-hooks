@@ -9,7 +9,7 @@ function CharacterDetail({ character }) {
     </figure>
   );
 }
-// add more after all is connected
+// add more after all is connected - THIS IS NOT RESTRUCTURED
 CharacterDetail.propTypes = {
   character: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -18,4 +18,3 @@ CharacterDetail.propTypes = {
 };
 
 export default CharacterDetail;
-

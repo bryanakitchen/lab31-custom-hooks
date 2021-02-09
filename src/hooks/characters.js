@@ -20,18 +20,18 @@ export const useCharacters = () => {
 
 };
 
-export const useSingleCharacter = () => {
+export const useSingleCharacter = (id) => {
    
   const [loading, setLoading] = useState(true);
-  const [character, setCharacter] = useState([]);
+  const [character, setCharacter] = useState({});
   
   useEffect(() => {
-    getCharacter()
+    getCharacter(id)
       .then(character => {
         setCharacter(character);
         setLoading(false);
       });
-  }, []);
+  }, [id]);
   
   return {
     loading,
