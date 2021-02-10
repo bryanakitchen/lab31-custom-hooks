@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Loading from '../loading/Loading';
+import Loading from '../components/loading/Loading';
 
 export default class CharactersPages extends Component {
   state = {
