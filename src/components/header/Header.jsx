@@ -7,7 +7,7 @@ function Header() {
 
   const toggle = ({ target }) => {
     if(target.checked) setTheme('dark');
-    console.log('checked');
+    if(!target.checked) setTheme('light');
   };
 
   return (

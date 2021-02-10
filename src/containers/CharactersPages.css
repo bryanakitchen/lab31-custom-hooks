@@ -1,0 +1,14 @@
+.CharactersPages {
+    display: flex;
+    text-decoration: none;
+}
+
+.light {
+    background: white;
+    color: black;
+}
+
+.dark {
+    background: black;
+    color: white;
+}
