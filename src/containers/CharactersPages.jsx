@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
+import CharacterList from '../components/characters/CharacterList';
 import Loading from '../components/loading/Loading';
 
 export default class CharactersPages extends Component {
   state = {
-    loading: true
+    loading: true,
+    characters: []
   }
   
   render() {
-    const { loading } = this.state;
+    const { loading, characters } = this.state;
 
     if(loading) return <Loading />;
     return (
-      <div>
-           Hello     
-      </div>
+      <CharacterList characters={characters} />
     );
   }
 }
