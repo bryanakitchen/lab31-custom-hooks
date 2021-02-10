@@ -9,5 +9,9 @@ describe('CharactersPages container', () => {
     screen.getByAltText('loading');
 
     const listOfCharacters = await screen.findByTestId('characters');
+
+    return waitFor(() => {
+      expect(listOfCharacters).not.toBeEmptyDOMElement();
+    });
   });
 });
