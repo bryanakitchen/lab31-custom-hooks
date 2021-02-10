@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CharacterList from '../components/characters/CharacterList';
 import Loading from '../components/loading/Loading';
+import { getAllCharacters } from '../services/fetchAPI';
 
 export default class CharactersPages extends Component {
   state = {
@@ -9,9 +10,10 @@ export default class CharactersPages extends Component {
   }
   
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ loading: false });
-    }, 500);
+    getAllCharacters()
+      .then(characters => {
+        this.setState({ characters, loading: false });
+      });
   }
 
   render() {
