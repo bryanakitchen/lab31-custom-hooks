@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CharacterDetail from '../components/character/CharacterDetail';
 import Loading from '../components/loading/Loading';
-import { useSingleCharacter } from '../hooks/characters';
+import { useSingleCharacter } from '../state/charactersHooks';
 
 const DetailPage = ({ match }) => {
   const { loading, character } = useSingleCharacter(match.params.id);
