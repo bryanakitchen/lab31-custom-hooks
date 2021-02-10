@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function CharacterDetail({ character }) {
   return (
-    <figure>
+    <figure data-testid="character">
       <img src={character.image} alt={character.name} />
       <figcaption>{character.name}</figcaption>     
     </figure>

@@ -13,7 +13,7 @@ const server = setupServer(
   })
 );
 
-describe('CharactersPages component', () => {
+describe('CharactersPages test', () => {
   beforeAll(() => server.listen());
   afterAll(() => server.close());
     

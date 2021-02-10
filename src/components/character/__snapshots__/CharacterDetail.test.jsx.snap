@@ -2,7 +2,9 @@
 
 exports[`CharacterDetail component renders CharacterDetail 1`] = `
 <DocumentFragment>
-  <figure>
+  <figure
+    data-testid="character"
+  >
     <img
       alt="Admiral"
       src="https://vignette.wikia.nocookie.net/animalcrossing/images/e/ed/Admiral_NH.png/revision/latest?cb=20200802081138"
