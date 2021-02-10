@@ -8,6 +8,12 @@ export default class CharactersPages extends Component {
     characters: []
   }
   
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 500);
+  }
+
   render() {
     const { loading, characters } = this.state;
 
