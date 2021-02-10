@@ -8,7 +8,7 @@ const Character = ({ image, name }) => {
       <figcaption>{name}</figcaption>
     </figure>
   );
-}
+};
 
 Character.propTypes = {
   image: PropTypes.string.isRequired,
