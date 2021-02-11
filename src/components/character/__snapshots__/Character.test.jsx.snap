@@ -6,7 +6,7 @@ exports[`Character component renders Character 1`] = `
     <img
       alt="Admiral"
       src="https://vignette.wikia.nocookie.net/animalcrossing/images/e/ed/Admiral_NH.png/revision/latest?cb=20200802081138"
-      style="width: 200px;"
+      style="width: 100px;"
     />
     <figcaption>
       Admiral

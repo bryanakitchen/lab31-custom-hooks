@@ -2,19 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Character from './Character';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../state/themeContext';
+import styles from './CharacterList.css';
 
 function CharacterList({ characters }) {
+  const { theme } = useTheme();
 
   const characterElements = characters.map(character => (
-    <li key={character.id}>
-      <Link to={`/character/${character.id}`}>
+    <li key={character.id} >
+      <Link to={`/character/${character.id}`} 
+        style={{ textDecoration: 'none' }}>
         <Character name={character.name} image={character.image} /> 
       </Link>
     </li>
   ));
   
   return (
-    <ul data-testid="characters">
+    <ul data-testid="characters" className={`${styles[theme]}`} >
       {characterElements}
     </ul>
   );

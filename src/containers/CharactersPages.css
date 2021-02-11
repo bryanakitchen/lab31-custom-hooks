@@ -1,0 +1,15 @@
+.plain {
+    background: white;
+    color: black;
+}
+
+.style {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #0081A7;
+    color: #FDFCDC;
+    font-family: Open-Sans, Helvetica, Sans-Serif;
+}

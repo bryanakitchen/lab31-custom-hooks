@@ -6,6 +6,7 @@ import { setupServer } from 'msw/node';
 import charactersAPIResponse from '../fixtures/characters.json';
 import CharactersPages from './CharactersPages';
 import { MemoryRouter } from 'react-router-dom';
+import { ThemeProvider } from '../state/themeContext';
 
 const server = setupServer(
   rest.get('https://ac-vill.herokuapp.com/villagers', (req, res, ctx) => {
@@ -19,9 +20,12 @@ describe('CharactersPages test', () => {
     
   it('renders CharactersPages - page should start as loading but end in a list of characters', async() => {
     render(
-      <MemoryRouter>
-        <CharactersPages />
-      </MemoryRouter>);
+      <ThemeProvider>
+        <MemoryRouter>
+          <CharactersPages />
+        </MemoryRouter>
+      </ThemeProvider>
+    );
   
     screen.getAllByAltText('loading');
 

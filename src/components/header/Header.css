@@ -1,0 +1,44 @@
+.Header {
+
+}
+
+.plain {
+    background: white;
+    color: black;
+    
+}
+
+.style {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Open-Sans, Helvetica, Sans-Serif;
+    background: #0081A7;
+    color: #FDFCDC;
+
+    p {
+        color: #FED9B7;
+        font-size: 20px;
+        margin: 3px;
+    }
+
+    > .toggle {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        color: #FED9B7;        
+    }
+
+    input:checked {
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 5px;
+    }
+    
+}
+
+/* > direct child
+& any child
++ sibling */
