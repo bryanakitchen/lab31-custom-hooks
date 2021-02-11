@@ -6,6 +6,7 @@ import { setupServer } from 'msw/node';
 import singleAPIResponse from '../fixtures/oneCharacter.json';
 import DetailPage from './DetailPage';
 import { MemoryRouter } from 'react-router-dom';
+import { ThemeProvider } from '../state/themeContext';
 
 const server = setupServer(
   rest.get('https://ac-vill.herokuapp.com/villagers/character/', (req, res, ctx) => {
@@ -19,9 +20,12 @@ describe('DetailPage test', () => {
     
   it('renders DetailPage - page should start as loading but end in a detail page of one character', async() => {
     render(
-      <MemoryRouter>
-        <DetailPage match={{ params: { id: '5f5fb4bbbfd05c2aed82e460' } }} />
-      </MemoryRouter>);
+      <ThemeProvider>
+        <MemoryRouter>
+          <DetailPage match={{ params: { id: '5f5fb4bbbfd05c2aed82e460' } }} />
+        </MemoryRouter>
+      </ThemeProvider>
+    );
   
     screen.getAllByAltText('loading');
 
