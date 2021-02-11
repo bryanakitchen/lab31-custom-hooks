@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Character from './Character';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../state/themeContext';
 
 function CharacterList({ characters }) {
+  // const { theme } = useTheme();
+  // className={`${styles[theme]}`}
 
   const characterElements = characters.map(character => (
     <li key={character.id}>
