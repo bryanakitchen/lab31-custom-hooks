@@ -12,7 +12,7 @@ export default function CharactersPages() {
   if(loading) return <Loading />;
   
   return (
-    <div className={`${styles[theme]}`}>
+    <div className={`${styles.CharactersPages} ${styles[theme]}`}>
       <CharacterList characters={characters} />
     </div>
   );

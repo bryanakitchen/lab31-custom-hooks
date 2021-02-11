@@ -1,14 +1,21 @@
 .CharactersPages {
-    display: flex;
-    text-decoration: none;
 }
 
-.light {
+.plain {
     background: white;
     color: black;
 }
 
-.dark {
-    background: black;
-    color: white;
+.style {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #0081A7;
+    color: #FDFCDC;
+    font-family: Open-Sans, Helvetica, Sans-Serif;
+    
+
+    /* border: 3px solid yellow; */
 }
