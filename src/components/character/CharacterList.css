@@ -1,19 +1,24 @@
-.CharacterList {
-}
-
 .plain {
     background: white;
     color: black;
 }
 
 .style {
-    /* display: flex;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; */
-    /* background: #0081A7;
-    color: #FDFCDC; */
- 
-    border: 3px solid yellow;
+    
+    li {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        margin: 5px;
+        width: 220px;
+        height: 220px;
+        background: #F07167;
+    }
 }

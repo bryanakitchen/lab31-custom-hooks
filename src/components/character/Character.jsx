@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Character({ name, image }) {
+  
   return (
     <>
-      <figure>
-        <img src={image} alt={name} style={{ width: '200px' }}/>
+      <figure >
+        <img src={image} alt={name} style={{ width: '100px' }}/>
         <figcaption>{name}</figcaption>    
       </figure>    
     </>
